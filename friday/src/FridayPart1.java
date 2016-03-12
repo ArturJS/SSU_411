@@ -3,7 +3,7 @@ import java.util.*;
 /**
  * Created by nizamutdinovas on 15.01.2016.
  */
-public class Friday_part1 {
+public class FridayPart1 {
     public static void main(String[] args) {
         int year = ReadYear();
 

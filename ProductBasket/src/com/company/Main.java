@@ -5,7 +5,7 @@ import java.util.Scanner;
 public class Main {
 
     public static void main(String[] args) {
-        Basket basket = new Basket();
+        IBasket basket = new Basket();
         String product, quantity, command;
         Scanner in = new Scanner(System.in);
 

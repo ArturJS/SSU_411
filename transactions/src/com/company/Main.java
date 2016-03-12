@@ -88,7 +88,9 @@ public class Main {
                 receiverAcc = Integer.valueOf(operationInfo[3]);
                 money = new BigDecimal(operationInfo[4]);
                 operationLine = new String(fileName + "' line " + lineNumber + ".");
-
+                System.out.println("====. " + operationLine +
+                        " Money transfer done. Sender: '" + senderName + "; SenderAcc: " + senderAcc +
+                        "'. Receiver: '" + receiverName + "; ReceiverAcc: " + receiverAcc + "'. Money: " + operationInfo[4]);
                 if (!(companies.containsKey(senderAcc) && companies.get(senderAcc).getName().equals(senderName))) {
                     System.out.println("Error! '" + operationLine + " Sender not found!");
                     continue;
@@ -104,8 +106,8 @@ public class Main {
                 if (sender.debitMoney(money)) {
                     receiver.depositMoney(money);
                     System.out.println("Info. " + operationLine +
-                            " Money transfer done. Sender: '" + senderName +
-                            "'. Receiver: '" + receiverName + "'. Money: " + operationInfo[4]);
+                            " Money transfer done. Sender: '" + senderName + "; SenderAcc: " + senderAcc +
+                            "'. Receiver: '" + receiverName + "; ReceiverAcc: " + receiverAcc + "'. Money: " + operationInfo[4]);
                 } else {
                     System.out.println("Error! " + operationLine + " Not enough money for transfer!");
                 }

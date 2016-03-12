@@ -3,7 +3,7 @@ import java.util.*;
 /**
  * Created by Артур on 29.01.2016.
  */
-public class Friday_part2 {
+public class FridayPart2 {
     public static void main(String[] args) {
         int month = ReadMonth();
         int quantity = 0;

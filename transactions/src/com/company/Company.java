@@ -22,7 +22,7 @@ public class Company {
     }
 
     public void depositMoney(BigDecimal value) {
-        budget.add(value);
+        budget = budget.add(value);
     }
 
     public boolean debitMoney(BigDecimal value) {
